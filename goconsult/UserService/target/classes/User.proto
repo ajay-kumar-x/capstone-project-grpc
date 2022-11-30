@@ -1,0 +1,84 @@
+syntax ="proto3";
+option java_package="com.goconsult.grpc";
+
+service UserService{
+
+  rpc register(user) returns (responseMessage);
+  rpc viewProfile(Empty) returns(user);
+  rpc updateProfile(user) returns(responseMessage);
+  rpc updatePassword(updatePasswordDetail) returns(responseMessage);
+
+  //from Search service
+  rpc allAvailableSlots(Empty) returns(searchResponse);
+  rpc slotsBySpecification(searchRequest) returns(searchResponse);
+
+  //from booking service
+  rpc bookSlot(slotId) returns(responseMessage);
+  rpc viewBookedSlots(Empty) returns(counselorSlotArr);
+
+}
+  message user{
+    string user_name =1;
+    string contact =2;
+    string  address =3;
+    string dob =4;
+    string gender =5 ;
+    string occupation=6;
+  }
+
+  message Empty{}
+
+  message updatePasswordDetail{
+    string password=1;
+    string conf_password=2;
+  }
+  message responseMessage{
+    string message=1;
+    int32 responseCode=2;
+  }
+
+
+  //these are used in Search Service
+
+message searchRequest{
+  string searchBy=1 ;
+  string value=2;
+  //for fees
+  int32 lowerLimit=3;
+  int32 upperLimit=4;
+}
+message searchResponse{
+  repeated Slot slotArr=1;
+}
+
+message Slot{
+  int32 slot_id=1;
+  string counselor_name=2;
+  string counselor_contact=3;
+  int32 fees=4;
+  string specialization=5;
+  string date=6;
+  string from_time=7;
+  string to_time=8;
+}
+
+//functionality available in booking service
+message slotId{
+  int32 slot_id=1;
+}
+message counselorSlotArr{
+  repeated CounselorSlot slotArr=1;
+}
+message CounselorSlot{
+  int32 booking_id=1;
+  int32 slot_id=2;
+  string counselor_name=3;
+  string contact=4;
+  string specialization=5;
+  string date=6;
+  string from_time=7;
+  string to_time=8;
+  int32 total_amount=9;
+}
+
+
