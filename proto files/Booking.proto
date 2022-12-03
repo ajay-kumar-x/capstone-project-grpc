@@ -1,0 +1,69 @@
+syntax="proto3";
+option java_package="com.goconsult.grpc";
+
+service BookingService{
+
+  //a user can book the slot by giving the available slot_id and his user_id(which will be automatically detected in userService)
+  rpc bookSlot(bookingRequest) returns(bookingResponse);
+
+  //A user can see all the bookings made by him
+  rpc viewBookedSlotForUser(userId) returns(counselorSlotArr);
+
+  //A user can reschedule the booking made by him by providing the booking_id and available slot_id
+  rpc rescheduleBooking(rescheduleDetail) returns(bookingResponse);
+
+
+  // A counselor can see all details of his booked slots
+  rpc viewBookedSlotForCounselor(counselorId) returns(userSlotArr);
+
+}
+
+  message bookingRequest{
+  int32 slot_id=1;
+  int32 user_id=2;
+  }
+  message bookingResponse{
+     string message=1;
+     int32 responseCode=2;
+  }
+
+  message userId{
+    int32 user_id=1;
+  }
+
+    message counselorSlotArr{
+      repeated CounselorSlot slotArr=1;
+    }
+
+    message CounselorSlot{
+      int32 booking_id=1;
+      int32 slot_id=2;
+      string counselor_name=3;
+      string contact=4;
+      string specialization=5;
+      string date=6;
+      string from_time=7;
+      string to_time=8;
+      int32 total_amount=9;
+    }
+message counselorId{
+  int32 counselor_id=1;
+}
+message userSlotArr{
+    repeated UserSlot slotArr=1;
+}
+message UserSlot{
+  int32 booking_id=1;
+  int32 slot_id=2;
+  string user_name=3;
+  string contact=4;
+  string date=5;
+  string from_time=6;
+  string to_time=7;
+}
+
+message  rescheduleDetail{
+      int32 booking_id=1;
+      int32 slot_id=2;
+      int32 user_id=3;
+}
