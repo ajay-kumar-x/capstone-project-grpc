@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/goconsult/AppointmentBookingService/AppointmentBookingService.iml" filepath="$PROJECT_DIR$/goconsult/AppointmentBookingService/AppointmentBookingService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/CounselorService/CounselorService.iml" filepath="$PROJECT_DIR$/goconsult/CounselorService/CounselorService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/FeedbackService/FeedbackService.iml" filepath="$PROJECT_DIR$/goconsult/FeedbackService/FeedbackService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/NotificationService/NotificationService.iml" filepath="$PROJECT_DIR$/goconsult/NotificationService/NotificationService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/SearchService/SearchService.iml" filepath="$PROJECT_DIR$/goconsult/SearchService/SearchService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/UserAuthenticationService/UserAuthenticationService.iml" filepath="$PROJECT_DIR$/goconsult/UserAuthenticationService/UserAuthenticationService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/UserService/UserService.iml" filepath="$PROJECT_DIR$/goconsult/UserService/UserService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goconsult/goConsult.iml" filepath="$PROJECT_DIR$/goconsult/goConsult.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/goconsult v1.0.0.iml" filepath="$PROJECT_DIR$/.idea/goconsult v1.0.0.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CounselorService" />
+        <module name="AppointmentBookingService" />
+        <module name="UserService" />
+        <module name="FeedbackService" />
+        <module name="SearchService" />
+        <module name="UserAuthenticationService" />
+        <module name="NotificationService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AppointmentBookingService" target="1.8" />
+      <module name="CounselorService" target="1.8" />
+      <module name="FeedbackService" target="1.8" />
+      <module name="goConsult" target="1.8" />
+      <module name="NotificationService" target="1.8" />
+      <module name="SearchService" target="1.8" />
+      <module name="UserAuthenticationService" target="1.8" />
+      <module name="UserService" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
